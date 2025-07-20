@@ -1,15 +1,10 @@
-import e from "express";
-
-// Add this before the Course function (around line 10)
 const RatingComponent = ({ courseId, currentRating, onRatingUpdate }) => {
     const [rating, setRating] = useState(0);
     const [review, setReview] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (rating === 0) return;
-
         setIsSubmitting(true);
         const result = await addRating(courseId, rating, review);
         if (result) {
@@ -19,7 +14,6 @@ const RatingComponent = ({ courseId, currentRating, onRatingUpdate }) => {
         }
         setIsSubmitting(false);
     };
-
     return (
         <form onSubmit={handleSubmit} className="rating-form">
             <div className="star-rating">

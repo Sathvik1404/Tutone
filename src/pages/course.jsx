@@ -72,7 +72,6 @@ const Course = () => {
             </form>
         );
     };
-    // Replace existing fetchCourseAnalytics function
     const fetchCourseAnalytics = async (courseId) => {
         try {
             const response = await fetch(`http://localhost:3000/api/course/${courseId}/analytics`);
