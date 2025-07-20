@@ -11,7 +11,7 @@ import Course from './pages/course';
 import AddCoursePage from './pages/Institute/AddCoursePage';
 import AI from './pages/Ai';
 import VoiceTestPage from './form';
-import MyCourses from './pages/MyCourses';
+import MyCourses from './pages/MyCourses.jsx';
 function App() {
   return (
 
