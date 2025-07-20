@@ -1,103 +1,139 @@
-# 🧠 TUTONE - Online Course Platform
 
-TUTONE is a full-stack web application that allows users to browse, enroll, and rate online courses. It supports user authentication, secure payments via Razorpay, and personalized dashboards.
+# 🎓 Tutone Platform
 
-## 🚀 Features
-
-- 👤 User Authentication (JWT-based)
-- 💳 Razorpay Payment Integration
-- 📚 Enroll in Courses
-- ⭐ Rate & Review Courses
-- 🧾 My Courses Section
-- 🧩 RESTful APIs (Node.js + Express)
-- 💾 MongoDB for Data Storage
-- ⚛️ React.js Frontend (Vite)
-- 🔒 Protected Routes & Authorization
-
-## 🛠️ Tech Stack
-
-### Frontend
-- React.js (with Vite)
-- Tailwind CSS
-- Context API & Local Storage
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
-- Razorpay API
-- JSON Web Tokens (JWT)
-- Bcrypt for Password Hashing
+A full-stack course enrollment platform built using **Node.js**, **Express**, **MongoDB**, and **React.js**, with **Razorpay** integration for secure payments.
 
 ---
 
-## 🖼️ Screenshots
+## 📁 Folder Structure
 
-| Home Page | Payment | My Courses |
-|----------|----------|-------------|
-| ![Home](screenshots/home.png) | ![Payment](screenshots/payment.png) | ![My Courses](screenshots/mycourses.png) |
-
----
-
-## 🧩 Folder Structure
+```text
 project-root/
 ├── backend/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── middleware/
-│ └── server.js
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── server.js
 ├── frontend/
-│ ├── src/
-│ │ ├── pages/
-│ │ ├── components/
-│ │ └── App.jsx
-│ └── index.html
+│   └── src/
+│       ├── pages/
+│       ├── components/
+│       └── App.jsx
+│   └── index.html
 ├── .env
 └── README.md
+```
 
-yaml
-Copy
-Edit
+---
 
-
-
-## ⚙️ Getting Started
+## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/yourusername/tutone-platform.git
 cd tutone-platform
+```
 
-2. Setup Backend
-bash
-Copy
-Edit
+---
+
+### 2. Setup Backend
+
+```bash
 cd backend
 npm install
+```
 
-3. Create a .env file:
+---
 
-ini
-Copy
-Edit
+### 3. Configure Environment Variables
+
+Create a `.env` file in the `backend/` directory with the following:
+
+```ini
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 RAZORPAY_KEY=your_razorpay_key_id
 RAZORPAY_SECRET=your_razorpay_secret
+```
 
-Run the backend:
+---
 
-bash
-Copy
-Edit
+### 4. Start the Backend Server
+
+```bash
 npm start
+```
 
+This will start the backend server at:
 
-4. Setup Frontend
-bash
-Copy
-Edit
-cd frontend
+```
+http://localhost:5000
+```
+
+---
+
+### 5. Setup Frontend
+
+```bash
+cd ../frontend
 npm install
-npm run dev
+npm start
+```
+
+This will start the React development server at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## ✨ Features
+
+- 🔐 User Authentication (JWT)
+- 🎓 Course Enrollment
+- 💳 Razorpay Payment Integration
+- 📚 "My Courses" Dashboard
+- 🧠 Role-Based UI for Student, Teacher, Admin
+- 🌐 REST API with Express
+- 🧩 Modular Folder Structure
+
+---
+
+## 🔧 Technologies Used
+
+- **Frontend:** React.js, TailwindCSS (if used)
+- **Backend:** Node.js, Express.js, MongoDB
+- **Payment Gateway:** Razorpay
+- **Auth:** JWT (JSON Web Tokens)
+- **Database:** MongoDB Atlas or local
+
+---
+
+## 📎 API Routes (Backend)
+
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/register` | POST | Register a new user |
+| `/api/login` | POST | User login |
+| `/api/courses` | GET | Get all available courses |
+| `/api/enroll` | POST | Enroll in a course |
+| `/user/:userId/courses` | GET | Get enrolled courses |
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♂️ Author
+
+**Sathvik Goli**  
+[GitHub](https://github.com/sathvikgoli)  
+Feel free to contribute or raise issues.
+
+---
