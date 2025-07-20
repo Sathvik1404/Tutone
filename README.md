@@ -32,8 +32,8 @@ project-root/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/tutone-platform.git
-cd tutone-platform
+git clone https://github.com/Sathvik1404/Tutone.git
+cd Tutone
 ```
 
 ---
