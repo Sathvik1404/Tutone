@@ -22,8 +22,7 @@ const RatingComponent = ({ courseId, currentRating, onRatingUpdate }) => {
                         key={star}
                         className={`star ${star <= rating ? 'filled' : ''}`}
                         onClick={() => setRating(star)}
-                    >
-                        ★
+                    >rating★
                     </span>
                 ))}
             </div>
